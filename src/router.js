@@ -13,7 +13,14 @@ export default new Router({
     {
       path: '/EditPage',
       name: 'EditPage',
-      component: () => import('./views/EditPage.vue')
+      component: () => import('./views/EditPage.vue'),
+      children: [
+        {
+          path: '/WaitPage',
+          name: 'WaitPage',
+          component: () => import('./views/WaitPage.vue')
+        }
+      ]
     }
   ]
 })

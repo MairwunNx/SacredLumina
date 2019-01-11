@@ -112,6 +112,8 @@
 </style>
 
 <script>
+import EditPage from './EditPage'
+
 export default {
   name: 'DialogAlert',
   data: () => ({
@@ -132,6 +134,7 @@ export default {
         if (ss[0].length !== 0 && ss[0].endsWith('bin')) {
           this.$store.dispatch('setDirectoryPath', ss[0])
           this.$router.push('EditPage')
+          EditPage.methods.openSettings()
         } else {
           this.errorDialog = true
         }
