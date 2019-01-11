@@ -34,6 +34,16 @@ export default new Router({
           path: '/MagePage',
           name: 'MagePage',
           component: () => import('./views/MagePage.vue')
+        },
+        {
+          path: '/WElfPage',
+          name: 'WElfPage',
+          component: () => import('./views/WElfPage.vue')
+        },
+        {
+          path: '/DElfPage',
+          name: 'DElfPage',
+          component: () => import('./views/DElfPage.vue')
         }
       ]
     }

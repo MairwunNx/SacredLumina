@@ -36,11 +36,11 @@
         <md-list-item class="hero-label">
           <router-link to="/MagePage" active-class="active">Battle Mage</router-link>
         </md-list-item>
-        <md-list-item>
-          <span class="hero-label">Wood Elf</span>
+        <md-list-item class="hero-label">
+          <router-link to="/WElfPage" active-class="active">Wood Elf</router-link>
         </md-list-item>
-        <md-list-item>
-          <span class="hero-label">Dark Elf</span>
+        <md-list-item class="hero-label">
+          <router-link to="/DElfPage" active-class="active">Dark Elf</router-link>
         </md-list-item>
         <md-list-item>
           <span class="hero-label">Vampires</span>
