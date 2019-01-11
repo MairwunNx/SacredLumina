@@ -28,10 +28,10 @@
 
       <md-list>
         <md-list-item class="hero-label">
-          <router-link to="/GladPage" active-class="active" class="md-raised">Gladiator</router-link>
+          <router-link to="/GladPage" active-class="active">Gladiator</router-link>
         </md-list-item>
         <md-list-item class="hero-label">
-          <router-link to="/SeraPage" active-class="active" class="md-raised">Seraphim</router-link>
+          <router-link to="/SeraPage" active-class="active">Seraphim</router-link>
         </md-list-item>
         <md-list-item>
           <span class="hero-label">Battle Mage</span>
