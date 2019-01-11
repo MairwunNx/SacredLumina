@@ -29,6 +29,11 @@ export default new Router({
           path: '/SeraPage',
           name: 'SeraPage',
           component: () => import('./views/SeraPage.vue')
+        },
+        {
+          path: '/MagePage',
+          name: 'MagePage',
+          component: () => import('./views/MagePage.vue')
         }
       ]
     }

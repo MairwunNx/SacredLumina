@@ -33,8 +33,8 @@
         <md-list-item class="hero-label">
           <router-link to="/SeraPage" active-class="active">Seraphim</router-link>
         </md-list-item>
-        <md-list-item>
-          <span class="hero-label">Battle Mage</span>
+        <md-list-item class="hero-label">
+          <router-link to="/MagePage" active-class="active">Battle Mage</router-link>
         </md-list-item>
         <md-list-item>
           <span class="hero-label">Wood Elf</span>
