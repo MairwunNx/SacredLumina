@@ -27,8 +27,8 @@
       </md-toolbar>
 
       <md-list>
-        <md-list-item>
-          <span class="hero-label">Gladiator</span>
+        <md-list-item class="hero-label">
+          <router-link to="/GladPage" class="md-raised">Gladiator</router-link>
         </md-list-item>
         <md-list-item>
           <span class="hero-label">Seraphim</span>

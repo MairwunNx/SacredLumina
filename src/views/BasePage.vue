@@ -135,12 +135,8 @@ export default {
           this.$store.dispatch('setDirectoryPath', ss[0])
           this.$router.push('EditPage')
           EditPage.methods.openSettings()
-        } else {
-          this.errorDialog = true
-        }
-      } else {
-        this.notSelectedDialog = true
-      }
+        } else this.errorDialog = true
+      } else this.notSelectedDialog = true
     }
   }
 }

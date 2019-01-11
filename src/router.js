@@ -19,6 +19,11 @@ export default new Router({
           path: '/WaitPage',
           name: 'WaitPage',
           component: () => import('./views/WaitPage.vue')
+        },
+        {
+          path: '/GladPage',
+          name: 'GladPage',
+          component: () => import('./views/GladPage.vue')
         }
       ]
     }
