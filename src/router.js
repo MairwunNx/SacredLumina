@@ -24,6 +24,11 @@ export default new Router({
           path: '/GladPage',
           name: 'GladPage',
           component: () => import('./views/GladPage.vue')
+        },
+        {
+          path: '/SeraPage',
+          name: 'SeraPage',
+          component: () => import('./views/SeraPage.vue')
         }
       ]
     }

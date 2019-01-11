@@ -28,10 +28,10 @@
 
       <md-list>
         <md-list-item class="hero-label">
-          <router-link to="/GladPage" class="md-raised">Gladiator</router-link>
+          <router-link to="/GladPage" active-class="active" class="md-raised">Gladiator</router-link>
         </md-list-item>
-        <md-list-item>
-          <span class="hero-label">Seraphim</span>
+        <md-list-item class="hero-label">
+          <router-link to="/SeraPage" active-class="active" class="md-raised">Seraphim</router-link>
         </md-list-item>
         <md-list-item>
           <span class="hero-label">Battle Mage</span>
@@ -79,6 +79,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #303030;
+  }
+
+  .active {
+    -webkit-text-fill-color: #ff5252;
   }
 
   .no-select {
