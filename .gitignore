@@ -1,3 +1,13 @@
+# Editor directories and files
+.DS_Store
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
 # Logs
 logs
 *.log
@@ -31,6 +41,10 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
+/dist
+
+#Electron-builder output
+/dist_electron
 
 # Dependency directories
 node_modules/
@@ -56,6 +70,8 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.local
+.env.*.local
 
 # next.js build output
 .next
