@@ -9,6 +9,11 @@ export default new Router({
       path: '/BasePage',
       name: 'BasePage',
       component: () => import('./views/BasePage.vue')
+    },
+    {
+      path: '/EditPage',
+      name: 'EditPage',
+      component: () => import('./views/EditPage.vue')
     }
   ]
 })

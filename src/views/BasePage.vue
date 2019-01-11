@@ -131,6 +131,7 @@ export default {
       if (ss != null || ss !== undefined) {
         if (ss[0].length !== 0 && ss[0].endsWith('bin')) {
           this.$store.dispatch('setDirectoryPath', ss[0])
+          this.$router.push('EditPage')
         } else {
           this.errorDialog = true
         }
