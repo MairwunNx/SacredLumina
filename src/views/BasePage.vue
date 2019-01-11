@@ -8,9 +8,16 @@
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <md-dialog-alert
+      class="dialog-font"
       :md-active.sync="errorDialog"
-      md-title="Error!"
-      md-content="Not correct path, please select game bin folder!"/>
+      md-title="Error Validating"
+      md-content="Not correct path, please select game bin folder"/>
+
+    <md-dialog-alert
+      class="dialog-font"
+      :md-active.sync="notSelectedDialog"
+      md-title="Error Validating"
+      md-content="Please, select path with game bin folder"/>
 
     <md-app md-waterfall md-mode="fixed">
       <md-app-toolbar class="md-theme-dark">
@@ -59,6 +66,12 @@
     text-align: center;
   }
 
+  .dialog-font {
+    font-family: 'Roboto Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   .base-content-head {
     font-size: 50px;
     padding: 20px;
@@ -102,7 +115,8 @@
 export default {
   name: 'DialogAlert',
   data: () => ({
-    errorDialog: false
+    errorDialog: false,
+    notSelectedDialog: false
   }),
 
   methods: {
@@ -121,7 +135,7 @@ export default {
           this.errorDialog = true
         }
       } else {
-        this.errorDialog = true
+        this.notSelectedDialog = true
       }
     }
   }
