@@ -13,3 +13,24 @@ export function decimalToHex (value) {
 
   return Number(hexNumber)
 }
+
+/**
+ * Return hexadecimal array of file bytes.
+ *
+ * @param  {string} filePath - Path to need file.
+ * @return {Array} hexadecimal array of file bytes.
+ *
+ * @static
+ */
+export function getHexadecimalArray (filePath) {
+  const fs = require('fs')
+
+  let fileData = fs.readFileSync(filePath).toString('hex')
+  let result = []
+
+  for (let i = 0; i < fileData.length; i += 2) {
+    result.push('0x' + fileData[i] + '' + fileData[i + 1])
+  }
+
+  return result
+}
