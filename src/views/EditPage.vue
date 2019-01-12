@@ -48,8 +48,8 @@
         <md-list-item class="hero-label">
           <router-link to="/DwarfPage" active-class="active">Dwarf</router-link>
         </md-list-item>
-        <md-list-item>
-          <span class="hero-label">Daemon</span>
+        <md-list-item class="hero-label">
+          <router-link to="/DemonPage" active-class="active">Daemon</router-link>
         </md-list-item>
         <md-toolbar class="md-transparent title-padding" md-elevation="0">
           <span class="md-title">Lumina</span>
