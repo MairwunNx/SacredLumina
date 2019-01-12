@@ -113,6 +113,7 @@
 
 <script>
 import EditPage from './EditPage'
+import { loadData } from '../core/LoadData'
 
 export default {
   name: 'DialogAlert',
@@ -135,6 +136,7 @@ export default {
           this.$store.dispatch('setDirectoryPath', ss[0])
           this.$router.push('EditPage')
           EditPage.methods.openSettings()
+          loadData()
         } else this.errorDialog = true
       } else this.notSelectedDialog = true
     }
