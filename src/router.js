@@ -44,6 +44,11 @@ export default new Router({
           path: '/DElfPage',
           name: 'DElfPage',
           component: () => import('./views/DElfPage.vue')
+        },
+        {
+          path: '/VampPage',
+          name: 'VampPage',
+          component: () => import('./views/VampPage.vue')
         }
       ]
     }

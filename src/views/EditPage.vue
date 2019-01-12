@@ -42,8 +42,8 @@
         <md-list-item class="hero-label">
           <router-link to="/DElfPage" active-class="active">Dark Elf</router-link>
         </md-list-item>
-        <md-list-item>
-          <span class="hero-label">Vampires</span>
+        <md-list-item class="hero-label">
+          <router-link to="/VampPage" active-class="active">Vampiress</router-link>
         </md-list-item>
         <md-list-item>
           <span class="hero-label">Dwarf</span>
