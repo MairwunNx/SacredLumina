@@ -1,6 +1,5 @@
 import store from '../store'
 import { getNumberFromBytes } from '../utils/ByteUtils'
-// noinspection JSIgnoredPromiseFromCall
 
 /**
  * Load all game heroes positions and save data in global store.
