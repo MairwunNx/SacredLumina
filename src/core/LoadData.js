@@ -20,4 +20,11 @@ export function loadData () {
 
   store.dispatch('setSeraPageXPos', seraPositions[0])
   store.dispatch('setSeraPageYPos', seraPositions[1])
+
+  let magePositions = getNumberFromBytes(
+    store.getters.getDirectoryPath + '\\TYPE_NPC_MAGICIAN\\startcode.bin',
+    550551, 550556)
+
+  store.dispatch('setMagePageXPos', magePositions[0])
+  store.dispatch('setMagePageYPos', magePositions[1])
 }

@@ -4,7 +4,9 @@ export default {
     gladPageXPos: 'reading value ...',
     gladPageYPos: 'reading value ...',
     seraPageXPos: 'reading value ...',
-    seraPageYPos: 'reading value ...'
+    seraPageYPos: 'reading value ...',
+    magePageXPos: 'reading value ...',
+    magePageYPos: 'reading value ...'
   },
   mutations: {
     directoryPathMutation (state, payload) {
@@ -21,6 +23,12 @@ export default {
     },
     seraPageYPosMutation (state, payload) {
       state.seraPageYPos = payload
+    },
+    magePageXPosMutation (state, payload) {
+      state.magePageXPos = payload
+    },
+    magePageYPosMutation (state, payload) {
+      state.magePageYPos = payload
     }
   },
   actions: {
@@ -28,7 +36,9 @@ export default {
     setGladPageXPos: ({ commit }, payload) => commit('gladPageXPosMutation', payload),
     setGladPageYPos: ({ commit }, payload) => commit('gladPageYPosMutation', payload),
     setSeraPageXPos: ({ commit }, payload) => commit('seraPageXPosMutation', payload),
-    setSeraPageYPos: ({ commit }, payload) => commit('seraPageYPosMutation', payload)
+    setSeraPageYPos: ({ commit }, payload) => commit('seraPageYPosMutation', payload),
+    setMagePageXPos: ({ commit }, payload) => commit('magePageXPosMutation', payload),
+    setMagePageYPos: ({ commit }, payload) => commit('magePageYPosMutation', payload)
   },
   getters: {
     getDirectoryPath (state) {
@@ -45,6 +55,12 @@ export default {
     },
     getSeraPageYPos (state) {
       return state.seraPageYPos
+    },
+    getMagePageXPos (state) {
+      return state.magePageXPos
+    },
+    getMagePageYPos (state) {
+      return state.magePageYPos
     }
   }
 }
