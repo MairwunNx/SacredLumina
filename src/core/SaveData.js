@@ -11,4 +11,5 @@ export function saveData () {
   putInt32DataInFile(store.getters.getDirectoryPath + '\\TYPE_NPC_SERAPHIM\\startcode.bin', 550551, 550556, store.getters.getSeraPageXPos, store.getters.getSeraPageYPos)
   putInt32DataInFile(store.getters.getDirectoryPath + '\\TYPE_NPC_MAGICIAN\\startcode.bin', 550551, 550556, store.getters.getMagePageXPos, store.getters.getMagePageYPos)
   putInt32DataInFile(store.getters.getDirectoryPath + '\\TYPE_NPC_ELVE\\startcode.bin', 550551, 550556, store.getters.getWElfPageXPos, store.getters.getWElfPageYPos)
+  putInt32DataInFile(store.getters.getDirectoryPath + '\\TYPE_NPC_DARKELVE\\startcode.bin', 550551, 550556, store.getters.getDElfPageXPos, store.getters.getDElfPageYPos)
 }
