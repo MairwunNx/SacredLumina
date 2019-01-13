@@ -14,17 +14,16 @@ import { getHexadecimalArray, decimalToHex } from './HexUtils'
 export function getNumberFromBytes (path, offsetX, offsetY, length = 8) {
   let byteArray = getHexadecimalArray(path)
   let arrayBufferXPos = new ArrayBuffer(length)
-  let dataViewX = new DataView(arrayBufferXPos)
-
   let arrayBufferYPos = new ArrayBuffer(length)
+  let dataViewX = new DataView(arrayBufferXPos)
   let dataViewY = new DataView(arrayBufferYPos)
 
   for (let i = 0; i < 5; i++) {
-    dataViewX.setUint8(i, byteArray[offsetX + i])
+    dataViewX.setUint8(i, '0x' + byteArray[(offsetX + i) * 2] + '' + byteArray[(offsetX + i) * 2 + 1])
   }
 
   for (let i = 0; i < 5; i++) {
-    dataViewY.setUint8(i, byteArray[offsetY + i])
+    dataViewY.setUint8(i, '0x' + byteArray[(offsetY + i) * 2] + '' + byteArray[(offsetY + i) * 2 + 1])
   }
 
   return [dataViewX.getInt32(0, true), dataViewY.getInt32(0, true)]
