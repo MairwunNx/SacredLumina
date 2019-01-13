@@ -27,6 +27,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "v-hotkey": "^0.3.0",
     "vue-cli-plugin-electron-builder": "^1.0.0-rc.10",
     "vue-template-compiler": "^2.5.21"
   },

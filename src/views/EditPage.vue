@@ -15,7 +15,7 @@
           <span class="md-title">SacredLumina - Edit</span>
           <div class="md-toolbar-section-end">
             <md-button @click="$router.push('BasePage')" :md-ripple="false">OPEN NEW</md-button>
-            <md-button :md-ripple="false">SAVE</md-button>
+            <md-button v-hotkey="keymap" :md-ripple="false">SAVE</md-button>
           </div>
         </div>
       </md-app-toolbar>
@@ -119,6 +119,13 @@ export default {
   computed: {
     getPath () {
       return this.$store.getters.getDirectoryPath
+    },
+    keymap () {
+      return {
+        'ctrl+s' () {
+          alert('saved')
+        }
+      }
     }
   }
 }
