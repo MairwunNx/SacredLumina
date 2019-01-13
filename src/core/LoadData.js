@@ -27,4 +27,11 @@ export function loadData () {
 
   store.dispatch('setMagePageXPos', magePositions[0])
   store.dispatch('setMagePageYPos', magePositions[1])
+
+  let WElfPositions = getNumberFromBytes(
+    store.getters.getDirectoryPath + '\\TYPE_NPC_ELVE\\startcode.bin',
+    550551, 550556)
+
+  store.dispatch('setWElfPageXPos', WElfPositions[0])
+  store.dispatch('setWElfPageYPos', WElfPositions[1])
 }
