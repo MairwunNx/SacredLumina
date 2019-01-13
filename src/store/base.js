@@ -21,8 +21,14 @@ export default {
     setGladPageYPos: ({ commit }, payload) => commit('gladPageYPosMutation', payload)
   },
   getters: {
-    getDirectoryPath: (state) => state.directoryPath,
-    getGladPageXPos: (state) => state.gladPageXPos,
-    getGladPageYPos: (state) => state.gladPageYPos
+    getDirectoryPath (state) {
+      return state.directoryPath
+    },
+    getGladPageXPos (state) {
+      return state.gladPageXPos
+    },
+    getGladPageYPos (state) {
+      return state.gladPageYPos
+    }
   }
 }
