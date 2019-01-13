@@ -18,7 +18,7 @@ export function decimalToHex (value) {
  * Return hexadecimal array of file bytes.
  *
  * @param  {string} filePath - Path to need file.
- * @return {string} hexadecimal array of file bytes.
+ * @return {string} hexadecimal string of file bytes.
  *
  * @static
  */

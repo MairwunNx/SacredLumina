@@ -10,7 +10,9 @@ export default {
     welfPageXPos: 'reading value ...',
     welfPageYPos: 'reading value ...',
     delfPageXPos: 'reading value ...',
-    delfPageYPos: 'reading value ...'
+    delfPageYPos: 'reading value ...',
+    vampPageXPos: 'reading value ...',
+    vampPageYPos: 'reading value ...'
   },
   mutations: {
     directoryPathMutation (state, payload) {
@@ -45,6 +47,12 @@ export default {
     },
     delfPageYPosMutation (state, payload) {
       state.delfPageYPos = payload
+    },
+    vampPageXPosMutation (state, payload) {
+      state.vampPageXPos = payload
+    },
+    vampPageYPosMutation (state, payload) {
+      state.vampPageYPos = payload
     }
   },
   actions: {
@@ -58,7 +66,9 @@ export default {
     setWElfPageXPos: ({ commit }, payload) => commit('welfPageXPosMutation', payload),
     setWElfPageYPos: ({ commit }, payload) => commit('welfPageYPosMutation', payload),
     setDElfPageXPos: ({ commit }, payload) => commit('delfPageXPosMutation', payload),
-    setDElfPageYPos: ({ commit }, payload) => commit('delfPageYPosMutation', payload)
+    setDElfPageYPos: ({ commit }, payload) => commit('delfPageYPosMutation', payload),
+    setVampPageXPos: ({ commit }, payload) => commit('vampPageXPosMutation', payload),
+    setVampPageYPos: ({ commit }, payload) => commit('vampPageYPosMutation', payload)
   },
   getters: {
     getDirectoryPath (state) {
@@ -93,6 +103,12 @@ export default {
     },
     getDElfPageYPos (state) {
       return state.delfPageYPos
+    },
+    getVampPageXPos (state) {
+      return state.vampPageXPos
+    },
+    getVampPageYPos (state) {
+      return state.vampPageYPos
     }
   }
 }

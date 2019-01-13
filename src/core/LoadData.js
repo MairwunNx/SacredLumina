@@ -41,4 +41,11 @@ export function loadData () {
 
   store.dispatch('setDElfPageXPos', DElfPositions[0])
   store.dispatch('setDElfPageYPos', DElfPositions[1])
+
+  let VampPositions = getNumberFromBytes(
+    store.getters.getDirectoryPath + '\\TYPE_NPC_VAMPIRELADY\\startcode.bin',
+    550551, 550556)
+
+  store.dispatch('setVampPageXPos', VampPositions[0])
+  store.dispatch('setVampPageYPos', VampPositions[1])
 }
