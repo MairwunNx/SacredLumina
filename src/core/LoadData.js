@@ -13,4 +13,11 @@ export function loadData () {
 
   store.dispatch('setGladPageXPos', gladPositions[0])
   store.dispatch('setGladPageYPos', gladPositions[1])
+
+  let seraPositions = getNumberFromBytes(
+    store.getters.getDirectoryPath + '\\TYPE_NPC_SERAPHIM\\startcode.bin',
+    550551, 550556)
+
+  store.dispatch('setSeraPageXPos', seraPositions[0])
+  store.dispatch('setSeraPageYPos', seraPositions[1])
 }
