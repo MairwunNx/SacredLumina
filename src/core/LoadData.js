@@ -34,4 +34,11 @@ export function loadData () {
 
   store.dispatch('setWElfPageXPos', WElfPositions[0])
   store.dispatch('setWElfPageYPos', WElfPositions[1])
+
+  let DElfPositions = getNumberFromBytes(
+    store.getters.getDirectoryPath + '\\TYPE_NPC_DARKELVE\\startcode.bin',
+    550551, 550556)
+
+  store.dispatch('setDElfPageXPos', DElfPositions[0])
+  store.dispatch('setDElfPageYPos', DElfPositions[1])
 }
