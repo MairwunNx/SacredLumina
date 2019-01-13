@@ -8,7 +8,9 @@ export default {
     magePageXPos: 'reading value ...',
     magePageYPos: 'reading value ...',
     welfPageXPos: 'reading value ...',
-    welfPageYPos: 'reading value ...'
+    welfPageYPos: 'reading value ...',
+    delfPageXPos: 'reading value ...',
+    delfPageYPos: 'reading value ...'
   },
   mutations: {
     directoryPathMutation (state, payload) {
@@ -37,6 +39,12 @@ export default {
     },
     welfPageYPosMutation (state, payload) {
       state.welfPageYPos = payload
+    },
+    delfPageXPosMutation (state, payload) {
+      state.delfPageXPos = payload
+    },
+    delfPageYPosMutation (state, payload) {
+      state.delfPageYPos = payload
     }
   },
   actions: {
@@ -48,7 +56,9 @@ export default {
     setMagePageXPos: ({ commit }, payload) => commit('magePageXPosMutation', payload),
     setMagePageYPos: ({ commit }, payload) => commit('magePageYPosMutation', payload),
     setWElfPageXPos: ({ commit }, payload) => commit('welfPageXPosMutation', payload),
-    setWElfPageYPos: ({ commit }, payload) => commit('welfPageYPosMutation', payload)
+    setWElfPageYPos: ({ commit }, payload) => commit('welfPageYPosMutation', payload),
+    setDElfPageXPos: ({ commit }, payload) => commit('delfPageXPosMutation', payload),
+    setDElfPageYPos: ({ commit }, payload) => commit('delfPageYPosMutation', payload)
   },
   getters: {
     getDirectoryPath (state) {
@@ -77,6 +87,12 @@ export default {
     },
     getWElfPageYPos (state) {
       return state.welfPageYPos
+    },
+    getDElfPageXPos (state) {
+      return state.delfPageXPos
+    },
+    getDElfPageYPos (state) {
+      return state.delfPageYPos
     }
   }
 }
