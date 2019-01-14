@@ -55,4 +55,11 @@ export function loadData () {
 
   store.dispatch('setDwarfPageXPos', DwarfPositions[0])
   store.dispatch('setDwarfPageYPos', DwarfPositions[1])
+
+  let DemonPositions = getNumberFromBytes(
+    store.getters.getDirectoryPath + '\\TYPE_NPC_DAEMONIN\\startcode.bin',
+    550551, 550556)
+
+  store.dispatch('setDemonPageXPos', DemonPositions[0])
+  store.dispatch('setDemonPageYPos', DemonPositions[1])
 }
