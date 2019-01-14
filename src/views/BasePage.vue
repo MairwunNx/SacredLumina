@@ -24,7 +24,7 @@
         <div class="md-toolbar-row">
           <span class="md-title app-bar-header-text">SacredLumina</span>
           <div class="md-toolbar-section-end app-bar-header-icon">
-            <md-button class="md-icon-button" v-on:click="openRepository">
+            <md-button class="md-icon-button" v-hotkey="keymap" v-on:click="openRepository">
               <i class="md-icon md-icon-image icon-github md-theme-dark">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                   <path
@@ -112,8 +112,8 @@
 </style>
 
 <script>
-import EditPage from './EditPage'
-import { loadData } from '../core/LoadData'
+import { openRepository } from '../core/OpenRepo'
+import { openDirectory } from '../core/OpenDir'
 
 export default {
   name: 'DialogAlert',
@@ -121,24 +121,24 @@ export default {
     errorDialog: false,
     notSelectedDialog: false
   }),
-
   methods: {
     openRepository () {
-      window.open('https://github.com/MairwunNx/SacredLumina', '_blank')
+      openRepository()
     },
-
     openDirectory () {
-      const { dialog } = require('electron').remote
-      let ss = (dialog.showOpenDialog({ properties: ['openFile', 'openDirectory'] }))
-
-      if (ss != null || ss !== undefined) {
-        if (ss[0].length !== 0 && ss[0].endsWith('bin')) {
-          this.$store.dispatch('setDirectoryPath', ss[0])
-          this.$router.push('EditPage')
-          EditPage.methods.openSettings()
-          loadData()
-        } else this.errorDialog = true
-      } else this.notSelectedDialog = true
+      openDirectory()
+    }
+  },
+  computed: {
+    keymap () {
+      return {
+        'ctrl+n' () {
+          openDirectory()
+        },
+        'ctrl+g' () {
+          openRepository()
+        }
+      }
     }
   }
 }
