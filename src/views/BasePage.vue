@@ -24,7 +24,7 @@
         <div class="md-toolbar-row">
           <span class="md-title app-bar-header-text">SacredLumina</span>
           <div class="md-toolbar-section-end app-bar-header-icon">
-            <md-button class="md-icon-button" v-on:click="openRepository">
+            <md-button class="md-icon-button" v-hotkey="keymap" v-on:click="openRepository">
               <i class="md-icon md-icon-image icon-github md-theme-dark">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                   <path
@@ -139,6 +139,14 @@ export default {
           loadData()
         } else this.errorDialog = true
       } else this.notSelectedDialog = true
+    }
+  },
+  computed: {
+    keymap () {
+      return {
+        'ctrl+g': this.openRepository,
+        'ctrl+n': this.openDirectory
+      }
     }
   }
 }
