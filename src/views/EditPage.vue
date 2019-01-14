@@ -128,6 +128,9 @@ export default {
       return {
         'ctrl+s' () {
           saveData()
+        },
+        'ctrl+n' () {
+          router.push('BasePage')
         }
       }
     }
