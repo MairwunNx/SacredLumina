@@ -8,12 +8,12 @@
         <span class="md-display-3">Hero Settings</span>
         <md-field>
           <label>x-based-position</label>
-          <md-textarea onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" v-model="getXPosData" md-autogrow></md-textarea>
+          <md-textarea onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" v-model="getXPosData" required md-autogrow></md-textarea>
         </md-field>
 
         <md-field>
           <label>y-based-position</label>
-          <md-textarea onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" v-model="getYPosData" md-autogrow></md-textarea>
+          <md-textarea onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" v-model="getYPosData" required md-autogrow></md-textarea>
         </md-field>
 
         <md-content class="note">
