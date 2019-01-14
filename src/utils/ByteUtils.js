@@ -83,12 +83,5 @@ export function putInt32DataInFile (path, offsetX, offsetY, posX, posY) {
     fileData[offsetY + 1] = dataYPosLittleEndianArray[1]
   }
 
-  fs.open(path, 'w', function (err, fd) {
-    if (err) throw new Error(`Opening ${path} done with error ` + err)
-
-    fs.write(fd, fileData, 0, fileData.length, null, function (err) {
-      if (err) throw new Error(`Changing data: ${posX} and ${posY} in positions: ${offsetX} and ${offsetY} in file: ${path} done with error ` + err)
-      fs.close(fd, () => console.info(`Successfully done changing data: ${posX} and ${posY} in positions: ${offsetX} and ${offsetY} in file: ${path}`))
-    })
-  })
+  fs.writeFileSync(path, fileData)
 }
