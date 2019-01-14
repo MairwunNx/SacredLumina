@@ -56,19 +56,45 @@ export default {
     }
   },
   actions: {
-    setDirectoryPath: ({ commit }, payload) => commit('directoryPathMutation', payload),
-    setGladPageXPos: ({ commit }, payload) => commit('gladPageXPosMutation', payload),
-    setGladPageYPos: ({ commit }, payload) => commit('gladPageYPosMutation', payload),
-    setSeraPageXPos: ({ commit }, payload) => commit('seraPageXPosMutation', payload),
-    setSeraPageYPos: ({ commit }, payload) => commit('seraPageYPosMutation', payload),
-    setMagePageXPos: ({ commit }, payload) => commit('magePageXPosMutation', payload),
-    setMagePageYPos: ({ commit }, payload) => commit('magePageYPosMutation', payload),
-    setWElfPageXPos: ({ commit }, payload) => commit('welfPageXPosMutation', payload),
-    setWElfPageYPos: ({ commit }, payload) => commit('welfPageYPosMutation', payload),
-    setDElfPageXPos: ({ commit }, payload) => commit('delfPageXPosMutation', payload),
-    setDElfPageYPos: ({ commit }, payload) => commit('delfPageYPosMutation', payload),
-    setVampPageXPos: ({ commit }, payload) => commit('vampPageXPosMutation', payload),
-    setVampPageYPos: ({ commit }, payload) => commit('vampPageYPosMutation', payload)
+    setDirectoryPath ({ commit }, payload) {
+      commit('directoryPathMutation', payload)
+    },
+    setGladPageXPos ({ commit }, payload) {
+      commit('gladPageXPosMutation', payload)
+    },
+    setGladPageYPos ({ commit }, payload) {
+      commit('gladPageYPosMutation', payload)
+    },
+    setSeraPageXPos ({ commit }, payload) {
+      commit('seraPageXPosMutation', payload)
+    },
+    setSeraPageYPos ({ commit }, payload) {
+      commit('seraPageYPosMutation', payload)
+    },
+    setMagePageXPos ({ commit }, payload) {
+      commit('magePageXPosMutation', payload)
+    },
+    setMagePageYPos ({ commit }, payload) {
+      commit('magePageYPosMutation', payload)
+    },
+    setWElfPageXPos ({ commit }, payload) {
+      commit('welfPageXPosMutation', payload)
+    },
+    setWElfPageYPos ({ commit }, payload) {
+      commit('welfPageYPosMutation', payload)
+    },
+    setDElfPageXPos ({ commit }, payload) {
+      commit('delfPageXPosMutation', payload)
+    },
+    setDElfPageYPos ({ commit }, payload) {
+      commit('delfPageYPosMutation', payload)
+    },
+    setVampPageXPos: ({ commit }, payload) => {
+      commit('vampPageXPosMutation', payload)
+    },
+    setVampPageYPos: ({ commit }, payload) => {
+      commit('vampPageYPosMutation', payload)
+    }
   },
   getters: {
     getDirectoryPath (state) {
