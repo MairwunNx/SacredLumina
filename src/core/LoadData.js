@@ -48,4 +48,11 @@ export function loadData () {
 
   store.dispatch('setVampPageXPos', VampPositions[0])
   store.dispatch('setVampPageYPos', VampPositions[1])
+
+  let DwarfPositions = getNumberFromBytes(
+    store.getters.getDirectoryPath + '\\TYPE_NPC_ZWERG\\startcode.bin',
+    550551, 550556)
+
+  store.dispatch('setDwarfPageXPos', DwarfPositions[0])
+  store.dispatch('setDwarfPageYPos', DwarfPositions[1])
 }

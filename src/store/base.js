@@ -12,7 +12,9 @@ export default {
     delfPageXPos: 'reading value ...',
     delfPageYPos: 'reading value ...',
     vampPageXPos: 'reading value ...',
-    vampPageYPos: 'reading value ...'
+    vampPageYPos: 'reading value ...',
+    dwarfPageXPos: 'reading value ...',
+    dwarfPageYPos: 'reading value ...'
   },
   mutations: {
     directoryPathMutation (state, payload) {
@@ -53,6 +55,12 @@ export default {
     },
     vampPageYPosMutation (state, payload) {
       state.vampPageYPos = payload
+    },
+    dwarfPageXPosMutation (state, payload) {
+      state.dwarfPageXPos = payload
+    },
+    dwarfPageYPosMutation (state, payload) {
+      state.dwarfPageYPos = payload
     }
   },
   actions: {
@@ -94,6 +102,12 @@ export default {
     },
     setVampPageYPos: ({ commit }, payload) => {
       commit('vampPageYPosMutation', payload)
+    },
+    setDwarfPageXPos: ({ commit }, payload) => {
+      commit('dwarfPageXPosMutation', payload)
+    },
+    setDwarfPageYPos: ({ commit }, payload) => {
+      commit('dwarfPageYPosMutation', payload)
     }
   },
   getters: {
@@ -135,6 +149,12 @@ export default {
     },
     getVampPageYPos (state) {
       return state.vampPageYPos
+    },
+    getDwarfPageXPos (state) {
+      return state.dwarfPageXPos
+    },
+    getDwarfPageYPos (state) {
+      return state.dwarfPageYPos
     }
   }
 }
