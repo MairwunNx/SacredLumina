@@ -46,8 +46,6 @@ export function putInt32DataInFile (path, offsetX, offsetY, posX, posY) {
   let dataXPos = decimalToHex(posX)
   let dataYPos = decimalToHex(posY)
 
-  console.info(`Converted data XPos: ${dataXPos}, YPos: ${dataYPos}`)
-
   let dataArrX = []
   let dataArrY = []
 
@@ -59,13 +57,9 @@ export function putInt32DataInFile (path, offsetX, offsetY, posX, posY) {
     dataArrY.push('0x' + dataYPos.slice(i, i + 2))
   }
 
-  console.info(`Array data XPos: ${dataArrX}, YPos: ${dataArrY}`)
-
   let fileData = fs.readFileSync(path)
   let dataXPosLittleEndianArray = [ dataArrX[1], dataArrX[0] ]
   let dataYPosLittleEndianArray = [ dataArrY[1], dataArrY[0] ]
-
-  console.info(`Array data LittleEndian byte order XPos: ${dataXPosLittleEndianArray}, YPos: ${dataYPosLittleEndianArray}`)
 
   if (dataXPosLittleEndianArray[0] === undefined) {
     fileData[offsetX] = dataXPosLittleEndianArray[1]
