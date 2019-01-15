@@ -1,8 +1,8 @@
 <!--suppress JSUnusedGlobalSymbols, JSIgnoredPromiseFromCall -->
 <template>
   <div class="app no-select">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.css">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default-dark.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default-dark.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">

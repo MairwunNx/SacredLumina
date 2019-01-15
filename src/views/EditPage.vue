@@ -1,8 +1,8 @@
 <!--suppress JSUnusedGlobalSymbols, CssUnusedSymbol -->
 <template>
   <div class="app no-select">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.css">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default-dark.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default-dark.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
 
@@ -14,8 +14,8 @@
           </md-button>
           <span class="md-title">SacredLumina - Edit</span>
           <div class="md-toolbar-section-end">
-            <md-button @click="$router.push('BasePage')" :md-ripple="false">OPEN NEW</md-button>
-            <md-button @click="save" v-hotkey="keymap" :md-ripple="false">SAVE</md-button>
+            <md-button @click="$router.push('BasePage')">OPEN NEW</md-button>
+            <md-button @click="save" v-hotkey="keymap">SAVE</md-button>
           </div>
         </div>
       </md-app-toolbar>
