@@ -6,7 +6,7 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import store from './store'
 
-require('./styles/edit-pages.css')
+require('./styles/EditPages.css')
 
 Vue.use(VueHotkey)
 Vue.use(VueMaterial)
