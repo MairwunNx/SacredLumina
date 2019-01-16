@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.css">
     <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default-dark.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
 
     <md-app md-waterfall md-mode="fixed">
       <md-app-toolbar class="md-theme-dark">

@@ -1,7 +1,5 @@
 <template>
   <div class="base-content">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css"/>
-
     <div class="base-content-align">
       <div>
         <span class="md-title">Choose: which hero you would like to customize.</span>

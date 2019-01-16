@@ -1,8 +1,6 @@
 <!--suppress JSUnusedGlobalSymbols, JSIgnoredPromiseFromCall -->
 <template>
   <div class="base-content">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css"/>
-
     <div class="base-content-align">
       <div>
         <span class="md-display-3">Hero Settings</span>
