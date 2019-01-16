@@ -6,6 +6,8 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import store from './store'
 
+require('./styles/edit-pages.css')
+
 Vue.use(VueHotkey)
 Vue.use(VueMaterial)
 Vue.config.productionTip = false

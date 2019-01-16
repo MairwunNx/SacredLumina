@@ -22,31 +22,6 @@
   </div>
 </template>
 
-<style>
-  .base-content {
-    font-family: 'Roboto Mono', monospace;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: calc(100vh - 90px);
-    display: flex;
-  }
-
-  .base-content-align {
-    display: flex;
-  }
-
-  .note {
-    border-left: 4px solid #ff5252;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    text-align: left;
-  }
-
-  .note-content {
-    padding-left: 20px;
-  }
-</style>
-
 <script>
 export default {
   computed: {
