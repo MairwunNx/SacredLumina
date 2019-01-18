@@ -14,9 +14,17 @@
     <script>
       const customTitlebar = require('custom-electron-titlebar')
 
-      new customTitlebar.Titlebar('#303030', {
-        icon: './favicon.svg', iconsStyle: customTitlebar.Themebar.win, menu: null
+      let titleBar = new customTitlebar.Titlebar('#303030', {
+        icon: './favicon.svg',
+        iconsStyle: customTitlebar.Themebar.win,
+        titleHorizontalAlignment: 'left',
+        menu: null,
+        order: 'normal'
       })
+
+      if (process.platform !== "win32") {
+        titleBar.setThemeIcons(customTitlebar.Themebar.mac)
+      }
     </script>
   </body>
 </html>
