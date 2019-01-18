@@ -13,7 +13,13 @@ let win
 protocol.registerStandardSchemes(['app'], { secure: true })
 
 function createWindow () {
-  win = new BrowserWindow({ width: 1350, height: 815, minWidth: 1040, minHeight: 640, icon: 'src/assets/Logo.png' })
+  win = new BrowserWindow({
+    width: 1350,
+    height: 815,
+    minWidth: 1040,
+    minHeight: 640,
+    icon: 'src/assets/Logo.png',
+    frame: false })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
