@@ -124,7 +124,7 @@ export default {
 
   methods: {
     openRepository () {
-      window.open('https://github.com/MairwunNx/SacredLumina', '_blank')
+      require('electron').shell.openExternal('https://github.com/MairwunNx/SacredLumina')
     },
 
     openDirectory () {
