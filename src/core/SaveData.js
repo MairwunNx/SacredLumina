@@ -15,4 +15,6 @@ export function saveData () {
   putInt32DataInFile(store.getters.getDirectoryPath + '\\TYPE_NPC_VAMPIRELADY\\startcode.bin', 550551, 550556, store.getters.getVampPageXPos, store.getters.getVampPageYPos)
   putInt32DataInFile(store.getters.getDirectoryPath + '\\TYPE_NPC_ZWERG\\startcode.bin', 550551, 550556, store.getters.getDwarfPageXPos, store.getters.getDwarfPageYPos)
   putInt32DataInFile(store.getters.getDirectoryPath + '\\TYPE_NPC_DAEMONIN\\startcode.bin', 550551, 550556, store.getters.getDemonPageXPos, store.getters.getDemonPageYPos)
+
+  require('electron').shell.beep()
 }
