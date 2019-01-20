@@ -19,6 +19,20 @@
       md-title="Error Validating"
       md-content="Please, select path with game bin folder"/>
 
+    <md-dialog
+      class="dialog-font"
+      :md-active.sync="aboutDialog"
+      md-title="SacredLumina">
+      <md-dialog-title>SacredLumina</md-dialog-title>
+      <span class="md-subheading about-dialog-content">Utility for Sacred Underworld</span>
+      <p class="about-dialog-content">SacredLumina is simple, easy, the project was made according to the interest of the author and does not bring any benefit to other people, except for fun. The utility is able to edit the starting positions of game characters.</p>
+      <p class="about-dialog-content">Project founder: <a class="about-dialog-content-link" v-on:click="openFounderLink()">@MairwunNx</a></p>
+      <p class="about-dialog-content">Project version: v1.0.0.0.220119.R1 (SacredLumina-1.0.0.0-220119-release-1-official)</p>
+      <p class="about-dialog-content">Repository Creation data: 2019-01-11T08:56:54Z</p>
+      <p class="about-dialog-content">Say thanks: <a class="about-dialog-content-link" @click="openFounderMail()">MairwunNx@gmail.com</a> or donate <a class="about-dialog-content-link" @click="openFounderQiwi()">qiwi</a> and <a class="about-dialog-content-link" @click="openFounderYMoney()">y.money</a></p>
+      <p class="about-dialog-content">Licensed under <a class="about-dialog-content-link" @click="openProjectLicense()">Apache 2.0</a>, sources available on <a class="about-dialog-content-link" @click="openProjectSources()">github</a>.</p>
+    </md-dialog>
+
     <md-app md-waterfall md-mode="fixed">
       <md-app-toolbar class="md-theme-dark">
         <div class="md-toolbar-row">
@@ -52,7 +66,7 @@
       </div>
     </div>
     <div class="about-div">
-      <a class="about-div-link">About</a>
+      <a class="about-div-link" v-on:click="aboutDialog = true">About</a>
     </div>
   </div>
 </template>
@@ -83,6 +97,14 @@
     cursor: pointer;
     display: table-cell;
     vertical-align: middle;
+  }
+
+  .about-dialog-content {
+    padding: 0 24px 0;
+  }
+
+  .about-dialog-content-link {
+    cursor: pointer;
   }
 
   .dialog-font {
@@ -135,11 +157,14 @@ import EditPage from './EditPage'
 import { loadData } from '../core/LoadData'
 import { getLatest } from '../utils/UpdateUtils'
 
+const electron = require('electron')
+//todo: add max-width to dialog.
 export default {
   name: 'DialogAlert',
   data: () => ({
     errorDialog: false,
-    notSelectedDialog: false
+    notSelectedDialog: false,
+    aboutDialog: false
   }),
   mounted: function () {
     console.info(this.$store.getters.getInitialized)
@@ -150,9 +175,8 @@ export default {
   },
   methods: {
     openRepository () {
-      require('electron').shell.openExternal('https://github.com/MairwunNx/SacredLumina')
+      electron.shell.openExternal('https://github.com/MairwunNx/SacredLumina')
     },
-
     openDirectory () {
       const { dialog } = require('electron').remote
       let ss = (dialog.showOpenDialog({ properties: ['openFile', 'openDirectory'] }))
@@ -165,6 +189,24 @@ export default {
           loadData()
         } else this.errorDialog = true
       } else this.notSelectedDialog = true
+    },
+    openFounderLink () {
+      electron.shell.openExternal('https://github.com/MairwunNx')
+    },
+    openFounderMail () {
+      electron.shell.openExternal('mailto:MairwunNx@gmail.com')
+    },
+    openFounderQiwi () {
+      electron.shell.openExternal('https://qiwi.me/mairwunnx')
+    },
+    openFounderYMoney () {
+      electron.shell.openExternal('https://money.yandex.ru/to/410015993365458')
+    },
+    openProjectLicense () {
+      electron.shell.openExternal('https://github.com/MairwunNx/SacredLumina/blob/master/LICENSE')
+    },
+    openProjectSources () {
+      electron.shell.openExternal('https://github.com/MairwunNx/SacredLumina')
     }
   },
   computed: {
