@@ -114,7 +114,9 @@ export default {
     showNavigation: false
   }),
   methods: {
-    openSettings: () => router.push('WaitPage'),
+    openSettings () {
+      router.push('WaitPage')
+    },
     save () {
       saveData()
     }

@@ -162,8 +162,8 @@
 import EditPage from './EditPage'
 import { loadData } from '../core/LoadData'
 import { getLatest } from '../utils/UpdateUtils'
-
 const electron = require('electron')
+
 export default {
   name: 'DialogAlert',
   data: () => ({
