@@ -6,8 +6,7 @@ const XMLHttpRequest = require('xhr2')
  */
 export function getLatest () {
   const current = 'v1.0.0.0.220119.R1'
-  // todo: change repo url, currently set SacredMagician as version provider, because SacredLumina not have releases!
-  const requestURL = 'https://api.github.com/repos/MairwunNx/SacredMagician/releases/latest'
+  const requestURL = 'https://api.github.com/repos/MairwunNx/SacredLumina/releases/latest'
 
   let request = new XMLHttpRequest()
   request.open('GET', requestURL)
