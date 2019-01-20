@@ -51,6 +51,9 @@
         </div>
       </div>
     </div>
+    <div class="about-div">
+      <a class="about-div-link">About</a>
+    </div>
   </div>
 </template>
 
@@ -64,6 +67,22 @@
     min-height: 100vh;
     flex-direction: column;
     text-align: center;
+  }
+
+  .about-div {
+    background-color: #212121;
+    bottom: 0;
+    display: table;
+    height: 30px;
+    position: fixed;
+    text-align: center;
+    width: 100px;
+  }
+
+  .about-div-link {
+    cursor: pointer;
+    display: table-cell;
+    vertical-align: middle;
   }
 
   .dialog-font {
