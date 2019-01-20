@@ -26,11 +26,11 @@
       <md-dialog-title>SacredLumina</md-dialog-title>
       <span class="md-subheading about-dialog-content">Utility for Sacred Underworld</span>
       <p class="about-dialog-content">SacredLumina is simple, easy, the project was made according to the interest of the author and does not bring any benefit to other people, except for fun. The utility is able to edit the starting positions of game characters.</p>
-      <p class="about-dialog-content">Project founder: <a class="about-dialog-content-link" v-on:click="openFounderLink()">@MairwunNx</a></p>
+      <p class="about-dialog-content">Project founder: <a class="about-dialog-content-link" v-on:click="openBrowserLink('https://github.com/MairwunNx')">@MairwunNx</a></p>
       <p class="about-dialog-content">Project version: v1.0.0.0.220119.R1 (SacredLumina-1.0.0.0-220119-release-1-official)</p>
       <p class="about-dialog-content">Repository Creation data: 2019-01-11T08:56:54Z</p>
-      <p class="about-dialog-content">Say thanks: <a class="about-dialog-content-link" @click="openFounderMail()">MairwunNx@gmail.com</a> or donate <a class="about-dialog-content-link" @click="openFounderQiwi()">qiwi</a> and <a class="about-dialog-content-link" @click="openFounderYMoney()">y.money</a></p>
-      <p class="about-dialog-content">Licensed under <a class="about-dialog-content-link" @click="openProjectLicense()">Apache 2.0</a>, sources available on <a class="about-dialog-content-link" @click="openProjectSources()">github</a>.</p>
+      <p class="about-dialog-content">Say thanks: <a class="about-dialog-content-link" @click="openBrowserLink('mailto:MairwunNx@gmail.com')">MairwunNx@gmail.com</a> or donate <a class="about-dialog-content-link" @click="openBrowserLink('https://qiwi.me/mairwunnx')">qiwi</a> and <a class="about-dialog-content-link" @click="openBrowserLink('https://money.yandex.ru/to/410015993365458')">y.money</a></p>
+      <p class="about-dialog-content">Licensed under <a class="about-dialog-content-link" @click="openBrowserLink('https://github.com/MairwunNx/SacredLumina/blob/master/LICENSE')">Apache 2.0</a>, sources available on <a class="about-dialog-content-link" @click="openBrowserLink('https://github.com/MairwunNx/SacredLumina')">github</a>.</p>
     </md-dialog>
 
     <md-app md-waterfall md-mode="fixed">
@@ -38,7 +38,7 @@
         <div class="md-toolbar-row">
           <span class="md-title app-bar-header-text">SacredLumina</span>
           <div class="md-toolbar-section-end app-bar-header-icon">
-            <md-button class="md-icon-button" v-hotkey="keymap" v-on:click="openRepository">
+            <md-button class="md-icon-button" v-hotkey="keymap" v-on:click="openBrowserLink('https://github.com/MairwunNx/SacredLumina')">
               <i class="md-icon md-icon-image icon-github md-theme-dark">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                   <path
@@ -179,9 +179,6 @@ export default {
     }
   },
   methods: {
-    openRepository () {
-      electron.shell.openExternal('https://github.com/MairwunNx/SacredLumina')
-    },
     openDirectory () {
       const { dialog } = require('electron').remote
       let ss = (dialog.showOpenDialog({ properties: ['openFile', 'openDirectory'] }))
@@ -195,23 +192,8 @@ export default {
         } else this.errorDialog = true
       } else this.notSelectedDialog = true
     },
-    openFounderLink () {
-      electron.shell.openExternal('https://github.com/MairwunNx')
-    },
-    openFounderMail () {
-      electron.shell.openExternal('mailto:MairwunNx@gmail.com')
-    },
-    openFounderQiwi () {
-      electron.shell.openExternal('https://qiwi.me/mairwunnx')
-    },
-    openFounderYMoney () {
-      electron.shell.openExternal('https://money.yandex.ru/to/410015993365458')
-    },
-    openProjectLicense () {
-      electron.shell.openExternal('https://github.com/MairwunNx/SacredLumina/blob/master/LICENSE')
-    },
-    openProjectSources () {
-      electron.shell.openExternal('https://github.com/MairwunNx/SacredLumina')
+    openBrowserLink (url) {
+      electron.shell.openExternal(url)
     }
   },
   computed: {
