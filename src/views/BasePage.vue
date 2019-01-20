@@ -194,6 +194,9 @@ export default {
     },
     openBrowserLink (url) {
       electron.shell.openExternal(url)
+    },
+    openRepository () {
+      this.openBrowserLink('https://github.com/MairwunNx/SacredLumina')
     }
   },
   computed: {
