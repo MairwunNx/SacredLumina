@@ -114,6 +114,7 @@
 <script>
 import EditPage from './EditPage'
 import { loadData } from '../core/LoadData'
+import { getLatest } from '../utils/UpdateUtils'
 
 export default {
   name: 'DialogAlert',
@@ -121,7 +122,13 @@ export default {
     errorDialog: false,
     notSelectedDialog: false
   }),
-
+  mounted: function () {
+    console.info(this.$store.getters.getInitialized)
+    if (!this.$store.getters.getInitialized) {
+      getLatest()
+      this.$store.dispatch('setInitialized', true)
+    }
+  },
   methods: {
     openRepository () {
       require('electron').shell.openExternal('https://github.com/MairwunNx/SacredLumina')

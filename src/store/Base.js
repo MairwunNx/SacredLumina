@@ -16,7 +16,8 @@ export default {
     dwarfPageXPos: 'reading value ...',
     dwarfPageYPos: 'reading value ...',
     demonPageXPos: 'reading value ...',
-    demonPageYPos: 'reading value ...'
+    demonPageYPos: 'reading value ...',
+    initialized: false
   },
   mutations: {
     directoryPathMutation (state, payload) {
@@ -69,6 +70,9 @@ export default {
     },
     demonPageYPosMutation (state, payload) {
       state.demonPageYPos = payload
+    },
+    initializedMutation (state, payload) {
+      state.initialized = payload
     }
   },
   actions: {
@@ -122,6 +126,9 @@ export default {
     },
     setDemonPageYPos: ({ commit }, payload) => {
       commit('demonPageYPosMutation', payload)
+    },
+    setInitialized: ({ commit }, payload) => {
+      commit('initializedMutation', payload)
     }
   },
   getters: {
@@ -175,6 +182,9 @@ export default {
     },
     getDemonPageYPos (state) {
       return state.demonPageYPos
+    },
+    getInitialized (state) {
+      return state.initialized
     }
   }
 }

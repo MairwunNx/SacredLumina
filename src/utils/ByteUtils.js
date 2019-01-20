@@ -8,8 +8,6 @@ import { getHexadecimalArray, decimalToHex } from './HexUtils'
  * @param  {number} offsetY - decimal byte offsetYPos in file.
  * @param  {number} length - need data length, default 8 = Int32 type.
  * @return {Array} Converted array of decimal number to Int32 type.
- *
- * @static
  */
 export function getNumberFromBytes (path, offsetX, offsetY, length = 8) {
   let byteArray = getHexadecimalArray(path)
@@ -37,8 +35,6 @@ export function getNumberFromBytes (path, offsetX, offsetY, length = 8) {
  * @param  {number} offsetY - decimal byte offsetYPos in file.
  * @param  {number} posX - current hero X position.
  * @param  {number} posY - current hero Y position.
- *
- * @static
  */
 export function putInt32DataInFile (path, offsetX, offsetY, posX, posY) {
   const fs = require('fs')

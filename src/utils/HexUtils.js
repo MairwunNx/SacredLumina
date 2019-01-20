@@ -3,8 +3,6 @@
  *
  * @param  {number} value - Value to be converted to hex.
  * @return {string} Converted hexadecimal value.
- *
- * @static
  */
 export function decimalToHex (value) {
   let hexNumber = (+value).toString(16).toUpperCase()
@@ -19,8 +17,6 @@ export function decimalToHex (value) {
  *
  * @param  {string} filePath - Path to need file.
  * @return {string} hexadecimal string of file bytes.
- *
- * @static
  */
 export function getHexadecimalArray (filePath) {
   const fs = require('fs')

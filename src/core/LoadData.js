@@ -3,8 +3,6 @@ import { getNumberFromBytes } from '../utils/ByteUtils'
 
 /**
  * Load all game heroes positions and save data in global store.
- *
- * @static
  */
 export function loadData () {
   let gladPositions = getNumberFromBytes(
