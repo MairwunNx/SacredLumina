@@ -152,13 +152,18 @@
   }
 </style>
 
+<style lang="scss" scoped>
+  .md-dialog {
+    max-width: 768px;
+  }
+</style>
+
 <script>
 import EditPage from './EditPage'
 import { loadData } from '../core/LoadData'
 import { getLatest } from '../utils/UpdateUtils'
 
 const electron = require('electron')
-//todo: add max-width to dialog.
 export default {
   name: 'DialogAlert',
   data: () => ({
