@@ -5,7 +5,7 @@ const XMLHttpRequest = require('xhr2')
  * Get latest version, if new version exists then add bottom notify.
  */
 export function getLatest () {
-  const current = 'v1.0.0.0.220119.R1'
+  const current = 'v1.0.0.270119.R1'
   const requestURL = 'https://api.github.com/repos/MairwunNx/SacredLumina/releases/latest'
 
   let request = new XMLHttpRequest()
@@ -61,13 +61,13 @@ function getLatestData (object, current) {
   let assets = object['assets']
 
   let downloadUrlWin = assets[0]['browser_download_url']
-  let downloadUrlMac = assets[1]['browser_download_url']
+  //let downloadUrlMac = assets[1]['browser_download_url']
 
   if (lastVerstionTag !== current) {
     if (process.platform === 'win32') {
       return [lastVerstionTag, downloadUrlWin]
-    } else {
-      return [lastVerstionTag, downloadUrlMac]
+    //} else {
+      //return [lastVerstionTag, downloadUrlMac]
     }
   } else {
     return false
