@@ -61,13 +61,10 @@ function getLatestData (object, current) {
   let assets = object['assets']
 
   let downloadUrlWin = assets[0]['browser_download_url']
-  //let downloadUrlMac = assets[1]['browser_download_url']
 
   if (lastVerstionTag !== current) {
     if (process.platform === 'win32') {
       return [lastVerstionTag, downloadUrlWin]
-    //} else {
-      //return [lastVerstionTag, downloadUrlMac]
     }
   } else {
     return false
