@@ -162,6 +162,7 @@
 import EditPage from './EditPage'
 import { loadData } from '../core/LoadData'
 import { getLatest } from '../utils/UpdateUtils'
+import { sendStat } from '../core/SendStat'
 const electron = require('electron')
 
 export default {
@@ -172,8 +173,8 @@ export default {
     aboutDialog: false
   }),
   mounted: function () {
-    console.info(this.$store.getters.getInitialized)
     if (!this.$store.getters.getInitialized) {
+      sendStat()
       getLatest()
       this.$store.dispatch('setInitialized', true)
     }
