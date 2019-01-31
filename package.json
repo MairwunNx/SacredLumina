@@ -2,7 +2,7 @@
   "name": "SacredLumina",
   "author": "MairwunNx (Pavel Erokhin)",
   "description": "Simple Sacred Underworld hero start-pos editor.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "requestedExecutionLevel": "requireAdministrator",
   "private": true,
   "scripts": {

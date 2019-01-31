@@ -23,7 +23,7 @@ function sendIntall () {
   if (store.get('allowTelemetry', true)) {
     if (!store.get('downloaded', false)) {
       let time = (new Date()).toJSON().slice(0, 19).replace(/[-T]/g, ':')
-      let data = `DATA: [${time}] | OS: [${os.release} \\ ${os.userInfo().username}] | VER: [1.0.0.270119.R1.B70 \\ undefined] | TYPE: [Release]`
+      let data = `DATA: [${time}] | OS: [${os.release} \\ ${os.userInfo().username}] | VER: [1.0.1.310119.R2.B78 \\ undefined] | TYPE: [Release]`
       let dataEncoded = Buffer.from(data).toString('base64')
 
       let opt = net.request({

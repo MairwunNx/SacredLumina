@@ -27,7 +27,7 @@
       <span class="md-subheading about-dialog-content">Utility for Sacred Underworld</span>
       <p class="about-dialog-content">SacredLumina is simple, easy, the project was made according to the interest of the author and does not bring any benefit to other people, except for fun. The utility is able to edit the starting positions of game characters.</p>
       <p class="about-dialog-content">Project founder: <a class="about-dialog-content-link" v-on:click="openBrowserLink('https://github.com/MairwunNx')">@MairwunNx</a></p>
-      <p class="about-dialog-content">Project version: v1.0.0.270119.R1.B70 (SacredLumina-1.0.0-270119-release-1-official)</p>
+      <p class="about-dialog-content">Project version: v1.0.1.310119.R2.B77 (SacredLumina-1.0.1-310119-release-2-official)</p>
       <p class="about-dialog-content">Repository Creation data: 2019-01-11T08:56:54Z</p>
       <p class="about-dialog-content">Say thanks: <a class="about-dialog-content-link" @click="openBrowserLink('mailto:MairwunNx@gmail.com')">MairwunNx@gmail.com</a> or donate <a class="about-dialog-content-link" @click="openBrowserLink('https://qiwi.me/mairwunnx')">qiwi</a> and <a class="about-dialog-content-link" @click="openBrowserLink('https://money.yandex.ru/to/410015993365458')">y.money</a></p>
       <p class="about-dialog-content">Licensed under <a class="about-dialog-content-link" @click="openBrowserLink('https://github.com/MairwunNx/SacredLumina/blob/master/LICENSE')">Apache 2.0</a>, sources available on <a class="about-dialog-content-link" @click="openBrowserLink('https://github.com/MairwunNx/SacredLumina')">github</a>.</p>

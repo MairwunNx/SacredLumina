@@ -1,6 +1,6 @@
 import store from '../store'
 import { getNumberFromBytes } from '../utils/ByteUtils'
-import { sendStat, sendUseStat } from './SendStat'
+import { sendUseStat } from './SendStat'
 
 /**
  * Load all game heroes positions and save data in global store.

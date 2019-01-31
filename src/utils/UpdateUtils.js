@@ -7,7 +7,7 @@ const XMLHttpRequest = require('xhr2')
  * Get latest version, if new version exists then add bottom notify.
  */
 export function getLatest () {
-  const current = 'v1.0.0.270119.R1'
+  const current = 'v1.0.1.310119.R2'
   const requestURL = 'https://api.github.com/repos/MairwunNx/SacredLumina/releases/latest'
 
   let request = new XMLHttpRequest()
