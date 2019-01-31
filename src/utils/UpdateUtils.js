@@ -1,3 +1,5 @@
+import { sendUseStat } from '../core/SendStat'
+
 const electron = require('electron')
 const XMLHttpRequest = require('xhr2')
 
@@ -41,6 +43,7 @@ function addBottomNotify (data) {
   link.innerText = 'Download'
   link.onclick = function () {
     electron.shell.openExternal(data[1])
+    sendUseStat('update-downloaded')
   }
 
   base.appendChild(text)
@@ -64,6 +67,7 @@ function getLatestData (object, current) {
 
   if (lastVerstionTag !== current) {
     if (process.platform === 'win32') {
+      sendUseStat('update-available')
       return [lastVerstionTag, downloadUrlWin]
     }
   } else {

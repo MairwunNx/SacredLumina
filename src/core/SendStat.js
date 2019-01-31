@@ -41,7 +41,7 @@ function sendIntall () {
 
 function sendLaunch () {
   if (store.get('allowTelemetry', true)) {
-    if (os.userInfo().username !== 'Nynxx' && os.userInfo().username !== 'MairwunNx') {
+    if (os.userInfo().username !== 'Nynxx') {
       let opt = net.request({
         method: 'post',
         host: 'mnxtelemetry.zzz.com.ua',
@@ -53,9 +53,9 @@ function sendLaunch () {
   }
 }
 
-function sendUseStat (stat) {
+export function sendUseStat (stat) {
   if (store.get('allowTelemetry', true)) {
-    if (os.userInfo().username !== 'Nynxx' && os.userInfo().username !== 'MairwunNx') {
+    if (os.userInfo().username !== 'Nynxx') {
       let opt = net.request({
         method: 'post',
         host: 'mnxtelemetry.zzz.com.ua',

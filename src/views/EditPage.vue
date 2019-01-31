@@ -108,6 +108,7 @@
 <script>
 import router from '../router'
 import { saveData } from '../core/SaveData'
+import { sendUseStat } from '../core/SendStat'
 
 export default {
   data: () => ({
@@ -119,6 +120,7 @@ export default {
     },
     save () {
       saveData()
+      sendUseStat('save-data')
     }
   },
   computed: {
@@ -129,9 +131,11 @@ export default {
       return {
         'ctrl+s' () {
           saveData()
+          sendUseStat('save-data-hot')
         },
         'ctrl+n' () {
           router.push('BasePage')
+          sendUseStat('open-again-hot')
         }
       }
     }

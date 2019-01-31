@@ -162,7 +162,7 @@
 import EditPage from './EditPage'
 import { loadData } from '../core/LoadData'
 import { getLatest } from '../utils/UpdateUtils'
-import { sendStat } from '../core/SendStat'
+import { sendStat, sendUseStat } from '../core/SendStat'
 const electron = require('electron')
 
 export default {
@@ -175,6 +175,7 @@ export default {
   mounted: function () {
     if (!this.$store.getters.getInitialized) {
       sendStat()
+      sendUseStat()
       getLatest()
       this.$store.dispatch('setInitialized', true)
     }
@@ -190,6 +191,7 @@ export default {
           this.$router.push('EditPage')
           EditPage.methods.openSettings()
           loadData()
+          sendUseStat('open-directory')
         } else this.errorDialog = true
       } else this.notSelectedDialog = true
     },
@@ -198,6 +200,7 @@ export default {
     },
     openRepository () {
       this.openBrowserLink('https://github.com/MairwunNx/SacredLumina')
+      sendUseStat('open-repository')
     }
   },
   computed: {
